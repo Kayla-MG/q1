@@ -29,6 +29,8 @@ e)	Write a method, PrintDescendingFor, which uses a for loop to print all intege
             PrintIntegersDo();
             Console.WriteLine("**********************************************");
             PrintExcludingFor();
+            Console.WriteLine("**********************************************");
+            PrintDescendingFor();
         }
         static private void PrintIntegersFor()
         {
@@ -75,6 +77,10 @@ e)	Write a method, PrintDescendingFor, which uses a for loop to print all intege
         static private void PrintDescendingFor()
         {
             //e)	Write a method, PrintDescendingFor, which uses a for loop to print all integers between 60 and 40 in descending order.
+            for (int i = 59; i > 40; i--)
+            {
+                Console.WriteLine($"{i}");
+            }
         }
     }
 }
