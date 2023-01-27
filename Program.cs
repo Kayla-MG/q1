@@ -2,7 +2,7 @@
 {//WORKSHEET1 Q1
  //name - kayla mcgowan
  //student no. - s00233714
- /*Question 1
+ /*Question 1 from worksheet 1
     Each of these methods will take no parameters and will return void. 
  
     Call the method from your main method to test it.
