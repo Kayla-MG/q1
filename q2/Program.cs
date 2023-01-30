@@ -21,7 +21,7 @@
             //method being called for part (b) question 2
             AverageMinMax();
             //output of average num
-            Console.WriteLine($"Average - {AvgScore()}");//calling function here
+            
 
             /*
             static int CountOddNumbers()//method for part(a) question 2 
@@ -46,25 +46,59 @@
 
             }
             */
-            static int AverageMinMax()
+            static void AverageMinMax()
             {//b) Write a method, AverageMinMax,
              //   to read in 5 integer values from the console and output their average,
              //   the smallest number entered and the largest number entered to the console.
-                
+
+                int[] numInput = new int[5];
+                int low, high;
+                double avg;
+
+
                 for (int i = 0; i < 5; i++)
                 {
-                    Console.Write("Please enter a number      : ");
-                    int num = int.Parse(Console.ReadLine());
-
-                    static double AvgScore()
-                    {
-                        double avg = num.Average();
-                        return avg;
-                    }
+                    Console.Write($"{"Please enter a number" + (i + 1) + ": ",-40}");
+                    numInput[i] = int.Parse(Console.ReadLine());
                 }
+
+
+                //highest value method
+                static int GetHigh(int[] numInput)
+                {
+                    int high = numInput.Max();
+                    return high;
+
+                }
+
+                //lowest value method
+                static int GetLow(int[] numInput)
+                {
+                    int low = numInput.Min();
+                    return low;
+                }
+
+                static double GetAvg(int[] numInput)
+                {
+                    double avg = numInput.Average();
+                    return avg;
+                }
+                //call all methods now
+                avg = GetAvg(numInput);
+                high = GetHigh(numInput);
+                low = GetLow(numInput);
+
+                //display results
+                Console.WriteLine($"\n{"Results", -40}");
+                Console.WriteLine($"\n{"Average - " +(avg), -40}");
+                Console.WriteLine($"\n{"Highest - " +(high), -40}");
+                Console.WriteLine($"\n{"Lowest - " + (low),-40}");
+
+
+
+            }
 
             }
 
         }
     }
-}
